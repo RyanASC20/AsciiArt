@@ -1,3 +1,10 @@
+/**
+ * Execution: java -cp bin ToAscii file w h
+ * Dependencies: Picture.java
+ * 
+ * Converts file to ASCII. w and h are the widths and heights of subsections converted.
+ * 
+ */
 import java.awt.Color;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -94,8 +101,7 @@ class ToAscii {
         int[][] averages = calculateAverages(picture, subBoxWidth, subBoxHeight);
         int interval = calculateCharacterInterval(averages, chars.length);
 
-        if (args[3] == "dark") draw(averages, interval, chars);
-        else draw(averages, interval, charsRev);
+        draw(averages, interval, charsRev);
 
         // picture.show();
     }
